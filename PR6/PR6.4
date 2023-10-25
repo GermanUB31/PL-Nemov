@@ -1,0 +1,21 @@
+print('Вариант 4')
+print('---------№1--------')
+mass=[]
+a=int(input('кол-во элементов: '))
+for i in range(a):
+    mass.append(int(input('элемент: ')))
+print(mass)
+print('максимальный элемент',max(mass))
+n=0
+for g in mass:
+    n=n+1
+    if g==max(mass):
+        print('номер максимального',n)
+print('---------№2--------')
+mass2=[]
+for h in mass:
+    if h%2!=0:
+        mass2.append(h)
+    elif mass2==[]:
+        print('нет нечетных')
+print(mass2)
