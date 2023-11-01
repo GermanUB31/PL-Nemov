@@ -1,0 +1,118 @@
+from random import *
+print('------------#1-----------')
+def chetireugla (a, b):
+    s=a*b
+    print(s,'кв.ед')
+
+def triuglapr (a, b):
+    s=(1/2)*a*b
+    print(s,'кв.ед')
+
+def triugla (a, h):
+    s=(1/2)*a*h
+    print(s,'кв.ед')
+    
+def paralel (a, h):
+    s=a*h
+    print(s,'кв.ед')
+
+def romb(d1, d2):
+    s=(1/2)*d1*d2
+    print(s,'кв.ед')
+
+def trapec (a, b, h):
+    s=(1/2)*(a+b)*h
+    print(s,'кв.ед')
+
+def okruzh (r):
+    s=3.14*(r**2)
+    print(s,'кв.ед')
+
+def pravnugolnik(p, r):
+    s=(1/2)*p*r
+    print(s,'кв.ед')
+
+print('вы находитесь в режиме расчета площади правильных геометрических фигур')
+print('введите номер фигуры')
+print('1-квадрат или прямоугольник')
+print('2-прямоугольный треугольник')
+print('3-треугольник')
+print('4-параллелограмм')
+print('5-ромб')
+print('6-трапеция')
+print('7-круг')
+print('8-правильный н-угольник')
+vibor=int(input('№ '))
+if vibor==1:
+    print('прямоугольник/квадрат')
+    A=float(input('длина: '))
+    B=float(input('ширина: '))
+    chetireugla (A, B)
+elif vibor==2:
+    print('прямоугольный треугольник')
+    A=float(input('катет1: '))
+    B=float(input('катет2: '))
+    triuglapr (A, B)
+elif vibor==3:
+    print('треугольник')
+    A=float(input('основание: '))
+    B=float(input('высота: '))
+    triugla (A, B)
+elif vibor==4:
+    print('параллелограмм')
+    A=float(input('основание: '))
+    B=float(input('высота: '))
+    paralel (A, B)
+elif vibor==5:
+    print('ромб')
+    A=float(input('диагональ1: '))
+    B=float(input('диагональ2: '))
+    romb(A, B)
+elif vibor==6:
+    print('трапеция')
+    A=float(input('основание1: '))
+    B=float(input('основание2: '))
+    H=float(input('высота: '))
+    trapec (A, B, H)
+elif vibor==7:
+    print('круг')
+    R=float(input('Радиус: '))
+    okruzh (R)
+elif vibor==8:
+    print('правильный н-угольник')
+    P=float(input('периметр: '))
+    R=float(input('радиус вписанной окружности: '))
+    pravnugolnik(P, R)
+else:
+    print('ты ошибся номером, друг, куда ты звонишь?')
+print('/////////////№2////////////')
+mas1=[]
+mas2=[]
+mas3=[]
+for i1 in range(15):
+    x=randint(1, 40)
+    mas1.append(x)
+for i2 in range(15):
+    y=randint(1, 40)
+    mas2.append(y)
+for i3 in range(15):
+    z=randint(1, 40)
+    mas3.append(z)
+print(mas1)
+n1=0
+n2=0
+n3=0
+for mx in mas1:
+    n1=n1+mx
+print(mas2)
+for my in mas2:
+    n2=n2+my
+print(mas3)
+for mz in mas3:
+    n3=n3+mz
+print(n1,'сумма1')
+print(n2,'сумма2')
+print(n3,'сумма3')
+print(n1/15,'срзнач1')
+print(n2/15,'срзнач2')
+print(n3/15,'срзнач3')
