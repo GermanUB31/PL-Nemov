@@ -1,0 +1,16 @@
+m=int(input('строк: '))
+n=int(input('столбцов: '))
+A=[]
+B=[]
+for i in range(m):
+    b=[]
+    for j in range(n):
+        b.append(int(input('элемент :')))
+    A.append(b)
+for f in A:
+    B.append(sorted(f))
+for i in range(m):
+    for j in range(n):
+        print(B[i][j], end=' ')
+    print()
+
