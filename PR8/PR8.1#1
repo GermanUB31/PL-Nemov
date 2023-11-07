@@ -1,0 +1,22 @@
+print('///////////////////#1/////////////////////')
+n=3
+A=[]
+#sozdanie
+for i in range (n):
+    b=[]
+    for j in range(n):
+        b.append(int(input()))
+    A.append(b)
+#telo zadaniya
+z=0
+for i in range(n):
+    for j in range(i+1,n):
+        if A[i][j]>0:
+            z=z+A[i][j]
+#vivod
+for i in range (n):
+    for j in range (n):
+        print(A[i][j], end=' ')
+    print()
+
+print(z,"summa nad diagonal'you")
