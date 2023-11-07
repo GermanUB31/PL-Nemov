@@ -1,0 +1,24 @@
+print('------------------#1------------------')
+k=int(input('введите k: '))
+n=3
+A=[]
+J=[]
+#sozdanie
+for i in range (n):
+    b=[]
+    for j in range(n):
+        b.append(int(input()))
+    A.append(b)
+#ishu kratnie k i max
+for i in range (n):
+    for j in range (n):
+        if A[i][j]%k==0:
+            J.append(A[i][j])
+#vivod
+for i in range (n):
+    for j in range (n):
+        print(A[i][j], end=' ')
+    print()
+print(J,'кратные k')
+mx=max(J)
+print(mx,'максимальное кратное k')
