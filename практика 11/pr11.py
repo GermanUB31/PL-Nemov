@@ -192,10 +192,7 @@ def openfl():
 txtfl = Text(tab3,width=50)
 txtfl.grid(row=0, column=1, stick='ns')
 
-menu = Menu(window)
-itm=Menu(menu)
-itm.add_command(label='добавить файл', command=lambda : openfl())
-menu.add_cascade(label='file', menu=itm)
+
 
 scrll=ttk.Scrollbar(tab3, orient=VERTICAL, command=txtfl.yview)
 scrll.grid(row=0, column=2, stick='ns')
